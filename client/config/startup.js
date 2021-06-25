@@ -1,11 +1,5 @@
-import React from 'react'
-
 const Startup = (props) => {
-  return (
-    <div>
-      {props.children}
-    </div>
-  )
+  return props.children
 }
 
 export default Startup
