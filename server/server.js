@@ -1,5 +1,6 @@
 import express from 'express'
 import http from 'http'
+import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import favicon from 'serve-favicon'
 import io from 'socket.io'
@@ -17,6 +18,7 @@ const httpServer = http.createServer(server)
 const PORT = config.port
 
 const middleware = [
+  cors(),
   cookieParser(),
   express.json({ limit: '50kb' }),
   express.static(resolve(__dirname, '../dist')),
