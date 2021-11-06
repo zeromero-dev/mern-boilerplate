@@ -8,10 +8,7 @@ import Root from './config/root'
 const target = document.querySelector('#root')
 
 const render = (Component) => {
-  ReactDOM.render(
-    <Component />,
-    target
-  )
+  ReactDOM.render(<Component />, target)
 }
 
 render(Root)

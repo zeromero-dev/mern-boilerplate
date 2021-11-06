@@ -3,7 +3,7 @@ import { connectRouter } from 'connected-react-router'
 
 const createRootReducer = (history) => {
   return combineReducers({
-    router: connectRouter(history),
+    router: connectRouter(history)
   })
 }
 

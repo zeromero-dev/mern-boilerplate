@@ -9,7 +9,7 @@ mongoose.connection.on('connected', () => {
 
 mongoose.connection.on('error', (err) => {
   // eslint-disable-next-line
-  console.log('DB isn\'t connected')
+  console.log("DB isn't connected")
   // eslint-disable-next-line
   console.log(err)
   process.exit(1)

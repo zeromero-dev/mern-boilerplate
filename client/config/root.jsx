@@ -12,11 +12,7 @@ import Main from '../components/main'
 const OnlyAnonymousRoute = ({ component: Component, ...rest }) => {
   const { user, token } = useSelector((s) => s.auth)
   const func = (props) => {
-    return !!user && !!token ? (
-      <Redirect to="/channels" />
-    ) : (
-      <Component {...props} />
-    )
+    return !!user && !!token ? <Redirect to="/channels" /> : <Component {...props} />
   }
   return <Route {...rest} render={func} />
 }
@@ -24,11 +20,7 @@ const OnlyAnonymousRoute = ({ component: Component, ...rest }) => {
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const { user, token } = useSelector((s) => s.auth)
   const func = (props) => {
-    return !!user && !!token ? (
-      <Component {...props} />
-    ) : (
-      <Redirect to="/login" />
-    )
+    return !!user && !!token ? <Component {...props} /> : <Redirect to="/login" />
   }
   return <Route {...rest} render={func} />
 }

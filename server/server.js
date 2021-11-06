@@ -33,12 +33,14 @@ server.get('/', (req, res) => {
 
 // MongoDB
 if (config.mongoEnabled) {
+  // eslint-disable-next-line
   console.log('MongoDB Enabled: ', config.mongoEnabled)
   mongooseService.connect()
 }
 
 // SocketsIO
 if (config.socketsEnabled) {
+  // eslint-disable-next-line
   console.log('Sockets Enabled: ', config.socketsEnabled)
   const socketIO = io(httpServer, {
     path: '/ws'
@@ -72,5 +74,5 @@ server.use('/api/', (req, res) => {
 })
 
 httpServer.listen(PORT)
-
+// eslint-disable-next-line
 console.log(`Serving at http://localhost:${PORT}`)

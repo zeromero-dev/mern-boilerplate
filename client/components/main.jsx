@@ -6,9 +6,7 @@ const Main = () => {
   return (
     <div className="flex justify-center p-4 bg-gray-600">
       <Head title="Main" />
-      <div className="flex font-semibold text-gray-200">
-        MERN Boilerplate
-      </div>
+      <div className="flex font-semibold text-gray-200">MERN Boilerplate</div>
     </div>
   )
 }

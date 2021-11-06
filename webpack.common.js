@@ -9,7 +9,10 @@ const ESLintPlugin = require('eslint-webpack-plugin')
 const { SOCKETS_ENABLE } = process.env
 
 const config = {
-  entry: './client/main.js',
+  entry: './client/main.jsx',
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+  },
   output: {
     filename: 'assets/js/[name].bundle.js',
     path: resolve(__dirname, 'dist'),
