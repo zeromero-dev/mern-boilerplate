@@ -3,11 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <%= htmlWebpackPlugin
+      .tags
+      .headTags
+      .filter((tag) => tag.tagName === 'link')
+    %>
+    <title>MERN Boilerplate</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="text/javascript" src="/assets/js/main.bundle.js"></script>
+    <!--
+      Attention!
+      This file is used exclusively as a template for the index.html assembly.
+    -->
+    <%= htmlWebpackPlugin
+      .tags
+      .headTags
+      .filter((tag) => tag.tagName === 'script')
+    %>
   </body>
 </html>

@@ -73,6 +73,7 @@ server.use('/api/', (req, res) => {
   res.end()
 })
 
-httpServer.listen(PORT)
-// eslint-disable-next-line
-console.log(`Serving at http://localhost:${PORT}`)
+httpServer.listen(PORT, () => {
+  // eslint-disable-next-line
+  console.log(`Serving at http://localhost:${PORT}`)
+})

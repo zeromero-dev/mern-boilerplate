@@ -4,9 +4,9 @@ import Head from './head'
 
 const Main = () => {
   return (
-    <div className="flex justify-center p-4 bg-gray-600">
+    <div className="flex justify-center p-4 bg-slate-300">
       <Head title="Main" />
-      <div className="flex font-semibold text-gray-200">MERN Boilerplate</div>
+      <div className="flex font-semibold text-slate-800">MERN Boilerplate</div>
     </div>
   )
 }

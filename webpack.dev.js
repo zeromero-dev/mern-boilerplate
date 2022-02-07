@@ -14,20 +14,22 @@ const config = {
   devServer: {
     hot: true,
     // open: true,
-    contentBase: resolve(__dirname, 'dist'),
     port: 8081,
     host: 'localhost',
-    index: 'index.html',
-    overlay: {
-      warnings: false,
-      errors: true
+    // static: {
+    //   directory: resolve(__dirname, 'dist'),
+    // },
+    client: {
+      overlay: {
+        warnings: false,
+        errors: true
+      },
     },
     proxy: {
       context: ['/api', '/ws', '/favicon.ico'],
       target: `http://localhost:${PORT || 8080}`,
-      ws: !!SOCKETS_ENABLE
+      ws: SOCKETS_ENABLE === 'true'
     },
-    publicPath: '/',
     historyApiFallback: true
   }
 }
