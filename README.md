@@ -1,15 +1,16 @@
 # MERN boilerplate
 Client/Server boilerplate for pet-projects
 
-## What’s Included?
+## What’s included?
 - React
 - Redux
 - TailwindCSS
 - ESLint
+- Webpack
 - ExpressJS
 - Socket.IO`*`
 - Mongoose`*`
-- Webpack
+
 `*`*Connected via environment variables.*
 
 ## Notice
